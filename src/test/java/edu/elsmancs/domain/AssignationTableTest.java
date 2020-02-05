@@ -33,4 +33,11 @@ public class AssignationTableTest {
 		assertEquals(AssignationTable.getCharacter(22), "E");
 	}
 
+	@Test
+	public void differentAssignationTableTest() {
+		String[] charactersVectorWithCharO = {"T", "R", "O", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
+		AssignationTable tableWithCharOReplacingW = new AssignationTable(charactersVectorWithCharO);
+		assertEquals(tableWithCharOReplacingW.getCharacter(2), "O");
+		
+	}
 }
