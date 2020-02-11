@@ -8,36 +8,30 @@ public class AssignationTableTest {
 
 	@Test
 	public void getCharacterTest() {
-		assertEquals(AssignationTable.getCharacter(0), "T");
-		assertEquals(AssignationTable.getCharacter(1), "R");
-		assertEquals(AssignationTable.getCharacter(2), "W");
-		assertEquals(AssignationTable.getCharacter(3), "A");
-		assertEquals(AssignationTable.getCharacter(4), "G");
-		assertEquals(AssignationTable.getCharacter(5), "M");
-		assertEquals(AssignationTable.getCharacter(6), "Y");
-		assertEquals(AssignationTable.getCharacter(7), "F");
-		assertEquals(AssignationTable.getCharacter(8), "P");
-		assertEquals(AssignationTable.getCharacter(9), "D");
-		assertEquals(AssignationTable.getCharacter(10), "X");
-		assertEquals(AssignationTable.getCharacter(11), "B");
-		assertEquals(AssignationTable.getCharacter(12), "N");
-		assertEquals(AssignationTable.getCharacter(13), "J");
-		assertEquals(AssignationTable.getCharacter(14), "Z");
-		assertEquals(AssignationTable.getCharacter(15), "S");
-		assertEquals(AssignationTable.getCharacter(16), "Q");
-		assertEquals(AssignationTable.getCharacter(17), "V");
-		assertEquals(AssignationTable.getCharacter(18), "H");
-		assertEquals(AssignationTable.getCharacter(19), "L");
-		assertEquals(AssignationTable.getCharacter(20), "C");
-		assertEquals(AssignationTable.getCharacter(21), "K");
-		assertEquals(AssignationTable.getCharacter(22), "E");
+		AssignationTable regularTable = new AssignationTable();
+		assertEquals(regularTable.getCharacter(0), "T");
+		assertEquals(regularTable.getCharacter(1), "R");
+		assertEquals(regularTable.getCharacter(2), "W");
+		assertEquals(regularTable.getCharacter(3), "A");
+		assertEquals(regularTable.getCharacter(4), "G");
+		assertEquals(regularTable.getCharacter(5), "M");
+		assertEquals(regularTable.getCharacter(6), "Y");
+		assertEquals(regularTable.getCharacter(7), "F");
+		assertEquals(regularTable.getCharacter(8), "P");
+		assertEquals(regularTable.getCharacter(9), "D");
+		assertEquals(regularTable.getCharacter(10), "X");
+		assertEquals(regularTable.getCharacter(11), "B");
+		assertEquals(regularTable.getCharacter(12), "N");
+		assertEquals(regularTable.getCharacter(13), "J");
+		assertEquals(regularTable.getCharacter(14), "Z");
+		assertEquals(regularTable.getCharacter(15), "S");
+		assertEquals(regularTable.getCharacter(16), "Q");
+		assertEquals(regularTable.getCharacter(17), "V");
+		assertEquals(regularTable.getCharacter(18), "H");
+		assertEquals(regularTable.getCharacter(19), "L");
+		assertEquals(regularTable.getCharacter(20), "C");
+		assertEquals(regularTable.getCharacter(21), "K");
+		assertEquals(regularTable.getCharacter(22), "E");
 	}
 
-	@Test
-	public void differentAssignationTableTest() {
-		String[] charactersVectorWithCharO = {"T", "R", "O", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
-		AssignationTable tableWithCharOReplacingW = new AssignationTable(charactersVectorWithCharO);
-		assertEquals(tableWithCharOReplacingW.getCharacter(2), "O");
-		
-	}
 }

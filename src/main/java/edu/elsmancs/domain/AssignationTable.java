@@ -4,29 +4,35 @@ import java.util.Hashtable;
 
 public class AssignationTable {
 
-	private static String[] charactersVector = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
+	private String[] charactersVector;
 	static Hashtable<Integer, String> assignationTable = new Hashtable<Integer, String>();
 	
-	public AssignationTable(String[] charactersVector) {
-		this.setCharactersVector(charactersVector);
+	public AssignationTable() {
+		 this.charactersVector = new String[] {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
 	}
 	
-	public static String[] getCharactersVector() {
+	public AssignationTable(String[] charactersVector) {
+		this.charactersVector = charactersVector;
+	}
+	
+	
+	public String[] getCharactersVector() {
 		return charactersVector;
 	}
 	
-	public void setCharactersVector(String[] charactersVector) {
-		AssignationTable.charactersVector = charactersVector;
+	public int vectorLength() {
+		return this.charactersVector.length;
 	}
 	
-	private static void buildAssignationTable(){
-		for (int i = 0; i < getCharactersVector().length; i++)
+	
+	private void buildAssignationTable(){
+		for (int i = 0; i < vectorLength(); i++)
 			assignationTable.put(i, getCharactersVector()[i]);
 	}
 	
-	public static String getCharacter(int number) {
+	public String getCharacter(int number) {
 		buildAssignationTable();
-		int remainder = number % getCharactersVector().length;
+		int remainder = number % vectorLength();
 		return assignationTable.get(remainder);
 	}
 	
